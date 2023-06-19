@@ -1,0 +1,5 @@
+apache		Apache設定ファイル
+db-data		DBデーター
+src		作成物
+docker/
+  php		phpコンテナディレクトリ
