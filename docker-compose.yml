@@ -1,6 +1,16 @@
 version: '3.8'
 
 services:
+  php:
+    build: ./docker/php
+    env_file: phpfile.env
+    ports:
+      - 80:80
+    volumes:
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/html:/var/www/html
+      - ./docker/log/apache2:/var/log/apache2
+      - ./docker/log/xdebug:/var/log/xdebug
   service_postgres:
     image: postgres:15
     container_name: container_postgres
